@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+platforms=("windows/amd64" "windows/386" "linux/amd64")
+
 package=$1
 if [[ -z "$package" ]]; then
   echo "usage: $0 <package-name>"
@@ -7,8 +9,6 @@ if [[ -z "$package" ]]; then
 fi
 package_split=(${package//\// })
 package_name=${package_split[-1]}
-
-platforms=("windows/amd64" "windows/386" "linux/amd64")
 
 for platform in "${platforms[@]}"
 do
