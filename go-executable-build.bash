@@ -5,6 +5,7 @@ platforms=("windows/amd64" "windows/386" "linux/amd64")
 package=$1
 if [[ -z "$package" ]]; then
   echo "usage: $0 <package-name>"
+  echo "example: env GOPATH=\$PWD $0 github.com/educhastenier/defer"
   exit 1
 fi
 package_split=(${package//\// })

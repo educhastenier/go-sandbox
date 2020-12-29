@@ -3,3 +3,4 @@ build
 pkg
 src/github.com
 !src/github.com/educhastenier
+.idea

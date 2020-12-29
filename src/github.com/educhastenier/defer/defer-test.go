@@ -12,12 +12,13 @@ func main() {
 	fmt.Println("flag has value", flagvar)
 	deffer()
 	b()
-	fmt.Println("\n", c())
+	fmt.Println("")
+	fmt.Println(c())
 }
 
 func deffer() {
 	i := 0
-	defer fmt.Println(i)
+	defer fmt.Println("i at the time of defer:", i)
 	i++
 	fmt.Println(i)
 	return
